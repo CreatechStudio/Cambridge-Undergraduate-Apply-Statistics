@@ -30,7 +30,6 @@ def filePreProcess():
     if os.path.exists("output.xlsx"):
         os.remove("output.xlsx")
 
-
 class Main:
     def setup_method(self, method=None):
         self.driver = webdriver.Chrome()
