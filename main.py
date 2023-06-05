@@ -40,6 +40,8 @@ class Main:
 
     def autoFunction(self):
         self.driver.get("https://www.undergraduate.study.cam.ac.uk/apply/statistics")
+        time.sleep(10)
+        self.driver.find_element(By.CSS_SELECTOR, ".eu-cookie-compliance-save-preferences-button").click()
         self.driver.find_element(By.ID, "edit-year").click()
         self.driver.find_element(By.ID, "edit-open-open").click()
         self.driver.find_element(By.ID, "edit-winter-winter").click()
