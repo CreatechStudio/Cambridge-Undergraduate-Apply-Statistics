@@ -40,17 +40,16 @@ class Main:
 
     def autoFunction(self):
         self.driver.get("https://www.undergraduate.study.cam.ac.uk/apply/statistics")
-        time.sleep(10)
-        self.driver.find_element(By.CSS_SELECTOR, ".eu-cookie-compliance-save-preferences-button").click()
+        # time.sleep(10)
+        # self.driver.find_element(By.CSS_SELECTOR, ".eu-cookie-compliance-save-preferences-button").click()
         self.driver.find_element(By.ID, "edit-year").click()
         self.driver.find_element(By.ID, "edit-open-open").click()
         self.driver.find_element(By.ID, "edit-winter-winter").click()
         self.driver.find_element(By.ID, "edit-summer-summer").click()
         self.driver.find_element(By.ID, "edit-group-course").click()
 
-        for year in range(2013, 2023):
+        for year in range(2023, 2024):
             dropdown = self.driver.find_element(By.ID, "edit-year")
-            # dropdown.find_element(By.XPATH, "//option[. = '2021']").click()
             replaced_xpath = "//option[. = '{}']".format(year)
             dropdown.find_element(By.XPATH, replaced_xpath).click()
             for i in range(1, 32):
