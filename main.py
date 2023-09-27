@@ -48,7 +48,7 @@ class Main:
         self.driver.find_element(By.ID, "edit-summer-summer").click()
         self.driver.find_element(By.ID, "edit-group-course").click()
 
-        for year in range(2023, 2024):
+        for year in range(2014, 2024):
             dropdown = self.driver.find_element(By.ID, "edit-year")
             replaced_xpath = "//option[. = '{}']".format(year)
             dropdown.find_element(By.XPATH, replaced_xpath).click()
@@ -199,8 +199,7 @@ def dataProcess():
         "Archaeology",
         "Architecture",
         "Asian and Middle Eastern Studies",
-        "Chemical Engineering via Engineering",
-        "Chemical Engineering via Natural Sciences",
+        "Chemical Engineering and Biotechnology",
         "Classics",
         "Classics (4 years)",
         "Computer Science",
