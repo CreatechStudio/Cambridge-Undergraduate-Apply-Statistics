@@ -48,7 +48,7 @@ class Main:
         self.driver.find_element(By.ID, "edit-summer-summer").click()
         self.driver.find_element(By.ID, "edit-group-course").click()
 
-        for year in range(2023, 2024):
+        for year in range(2014, 2024):
             dropdown = self.driver.find_element(By.ID, "edit-year")
             replaced_xpath = "//option[. = '{}']".format(year)
             dropdown.find_element(By.XPATH, replaced_xpath).click()
@@ -163,7 +163,7 @@ def dataProcess():
                 if i not in item['Categories']:
                     missing_categories.append(i)
             # missing_categories = set(categories) - set(item['Categories'])
-            print(missing_categories)
+            # print(missing_categories)
             # missing_categories_data = [0] * len(missing_categories)
             for category in missing_categories:
                 index = categories.index(category)
